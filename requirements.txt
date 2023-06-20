@@ -5,6 +5,5 @@ streamlit-chat
 pyPDF2
 tiktoken
 pypdf 
-faiss
 faiss-cpu
 
