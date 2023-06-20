@@ -1,1 +1,8 @@
 streamlit
+langchain
+openai
+streamlit-chat
+pyPDF2
+tiktoken
+pypdf 
+
