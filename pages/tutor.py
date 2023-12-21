@@ -77,7 +77,7 @@ def create_thread_and_run(user_input):
 
 # Emulating concurrent user requests
 thread1, run1 = create_thread_and_run(
-    "Quiz me on the paper"
+    ""
 )
 
 # Pretty printing helper
