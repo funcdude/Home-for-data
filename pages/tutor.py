@@ -98,9 +98,10 @@ def wait_on_run(run, thread):
     return run
 # Wait for Run 1
 run1 = wait_on_run(run1, thread1)
-#pretty_print(get_response(thread1))
+response_data = pretty_print(get_response(thread1))
 
-st.json(pretty_print(get_response(thread1)))
+# Display the response_data as JSON
+st.json(response_data)
 
 # Wait for Run 2
 #run2 = wait_on_run(run2, thread2)
