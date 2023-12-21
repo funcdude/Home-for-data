@@ -101,7 +101,7 @@ run1 = wait_on_run(run1, thread1)
 response_data = pretty_print(get_response(thread1))
 
 # Display the response_data as JSON
-st.json(response_data)
+st.write(response_data)
 
 # Wait for Run 2
 #run2 = wait_on_run(run2, thread2)
