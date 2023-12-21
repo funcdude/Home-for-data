@@ -47,42 +47,7 @@ question = st.text_input(
 if uploaded_file and question and not openai_api_key:
     st.info("Please add your OPEN AI API key to continue.")
 
-"""
-doc_reader = PdfReader(uploaded_file)
-# read data from the file and put them into a variable called raw_text
-raw_text = ''
-for i, page in enumerate(doc_reader.pages):
-    text = page.extract_text()
-    if text:
-        raw_text += text
-# st.info(len(raw_text))
-
-# Splitting up the text into smaller chunks for indexing
-text_splitter = CharacterTextSplitter(        
-    separator = "\n",
-    chunk_size = 1000,
-    chunk_overlap  = 200, #striding over the text
-    length_function = len,
-)
-pages = text_splitter.split_text(raw_text)
-
-# st.info(pages[1])
-
-# Download embeddings from OpenAI, setting up FAISS for similarity search
-
-embeddings = OpenAIEmbeddings()
-
-docsearch = FAISS.from_texts(pages, embeddings)
-
-chain = load_qa_chain(OpenAI(), chain_type="stuff") # we are going to stuff all the docs in at once
-docs = docsearch.similarity_search(question,k=10) # the k-value tells how many similar values to return
-results = chain({"input_documents": docs, "question": question}, return_only_outputs=True)
-                   
-chain.run(input_documents=docs, question=question)
    
-st.write(results)
-"""
-
 #So that we can see the JSON outputs from the model
 import json
 
