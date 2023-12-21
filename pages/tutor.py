@@ -9,7 +9,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from PyPDF2 import PdfReader
 from langchain.chains.question_answering import load_qa_chain
 
-load_dotenv()  # take environment variables from .env
+# load_dotenv()  # take environment variables from .env
 
 OpenAI.api_key = os.getenv("OPENAI_API_KEY")
 
