@@ -4,13 +4,6 @@ import os
 from openai import OpenAI
 import time
 
-#from langchain import OpenAI
-#from langchain.embeddings.openai import OpenAIEmbeddings
-#from langchain.vectorstores import FAISS 
-#from langchain.text_splitter import CharacterTextSplitter
-#from PyPDF2 import PdfReader
-#from langchain.chains.question_answering import load_qa_chain
-
 # load_dotenv()  # take environment variables from .env
 
 OpenAI.api_key = os.getenv("OPENAI_API_KEY")
@@ -105,9 +98,9 @@ def wait_on_run(run, thread):
     return run
 # Wait for Run 1
 run1 = wait_on_run(run1, thread1)
-pretty_print(messages(thread1))
+pretty_print(get_response(thread1))
 
-st.write(thread1)
+st.write(run1)
 
 # Wait for Run 2
 #run2 = wait_on_run(run2, thread2)
